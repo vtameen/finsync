@@ -5,7 +5,7 @@
 <p align="center"><b>Your money in one place, synced to your Google account.</b><br>
 Expenses, debts and EMIs, investments and savings goals in one Android app.</p>
 
-<p align="center"><a href="../../releases/latest"><b>⬇ Download the latest APK</b></a> · Android 7.0+ · Public beta</p>
+<p align="center"><a href="https://github.com/vtameen/finsync/raw/main/download/FinSync-beta.apk"><b>⬇ Download FinSync APK</b></a> · v1.2.0 · Android 7.0+ · Public beta</p>
 
 <p align="center">
 <img src="screenshots/home.jpg" width="200"> <img src="screenshots/inbox.jpg" width="200"> <img src="screenshots/flows.jpg" width="200">
@@ -28,11 +28,17 @@ Expenses, debts and EMIs, investments and savings goals in one Android app.</p>
 
 ## Install
 
-1. Open the **[latest release](../../releases/latest)** on your phone and download `FinSync-<version>-beta.apk`.
+1. On your phone, tap **[Download FinSync APK](https://github.com/vtameen/finsync/raw/main/download/FinSync-beta.apk)**. You get `FinSync-beta.apk`, version 1.2.0, about 4 MB.
 2. Tap the file. If Android asks, allow your browser to **install unknown apps**. This is normal for apps that don't come from the Play Store.
 3. Open FinSync and choose **Continue with Google**.
 
 > **Beta note:** FinSync is also in closed testing on Google Play. The GitHub APK and the Play Store version are signed differently. To switch between them, uninstall the app first. Your data is stored in the cloud, so after you sign in again everything comes back.
+
+## Changelog
+
+**1.2.0 (public beta)** is the first public APK. It's rebuilt as a native Android app with Google sign-in, cloud sync and bank alert capture.
+
+SHA-256 for `FinSync-beta.apk` 1.2.0: `b51d7ff208dde0e41cb67480b13e834690c7d44c04fb595c182593de3ab986f3`
 
 ## Feedback
 
