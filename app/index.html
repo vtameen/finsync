@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#131314" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="FinSync">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="description" content="FinSync: expenses, debts, EMIs, investments and goals, synced to your Google account.">
+  <title>FinSync</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="web.css">
+</head>
+<body>
+  <div id="app"><div class="auth"><div class="logo"><span class="i">&#xea18;</span></div><div class="spin"></div></div></div>
+  <div id="scrim"></div>
+  <div id="toast"></div>
+  <script src="firebase.js"></script>
+  <script src="parser.js"></script>
+  <script src="app.js"></script>
+  <script>if ('serviceWorker' in navigator) addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));</script>
+</body>
+</html>

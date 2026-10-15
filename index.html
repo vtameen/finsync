@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FinSync: your money, in sync</title>
+<meta name="description" content="Expenses, debts and EMIs, investments and goals, synced to your Google account. Free on Android and iPhone.">
+<meta property="og:title" content="FinSync">
+<meta property="og:description" content="Expenses, debts and EMIs, investments and goals, synced to your Google account. Free on Android and iPhone.">
+<meta property="og:image" content="https://vtameen.github.io/finsync/app/icons/icon-512.png">
+<meta name="theme-color" content="#0a0b0e">
+<link rel="icon" type="image/png" href="app/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="app/icons/apple-touch-icon.png">
+<style>
+@font-face{font-family:DM;font-weight:400;src:url(app/fonts/dm-sans-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:DM;font-weight:500;src:url(app/fonts/dm-sans-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:DM;font-weight:700;src:url(app/fonts/dm-sans-latin-700-normal.woff2) format('woff2')}
+:root{--bg:#0a0b0e;--card:#16171b;--line:#2a2c31;--text:#e8eaed;--mute:#9aa0a6;--blue:#1a73e8;--blue2:#8ab4f8;--gold:#fdd663}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:DM,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{background:radial-gradient(900px 600px at 10% -10%,rgba(26,115,232,.35),transparent 60%),radial-gradient(700px 600px at 110% 110%,rgba(13,61,138,.45),transparent 60%),var(--bg);min-height:100vh}
+main{max-width:980px;margin:0 auto;padding:calc(48px + env(safe-area-inset-top)) 20px 56px}
+.top{display:flex;align-items:center;gap:14px}
+.logo{width:52px;height:52px;border-radius:15px;background:linear-gradient(160deg,#3b8bff,#1a5fd0);display:grid;place-items:center;box-shadow:0 10px 30px rgba(26,115,232,.45)}
+.logo img{width:52px;height:52px;border-radius:15px}
+.top b{font-size:24px;letter-spacing:-.5px}
+.beta{margin-left:auto;font-size:12px;font-weight:700;letter-spacing:2px;color:var(--gold);border:1.5px solid rgba(253,214,99,.45);padding:5px 11px;border-radius:20px}
+h1{font-size:clamp(40px,8vw,72px);line-height:1.02;letter-spacing:-2px;margin:56px 0 18px;font-weight:700}
+h1 em{font-style:normal;color:var(--blue2)}
+.lede{font-size:clamp(17px,2.4vw,20px);color:var(--mute);max-width:560px;line-height:1.5;margin:0}
+.ctas{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px;max-width:620px}
+.cta{display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:18px;text-decoration:none;color:var(--text);background:var(--card);border:1px solid var(--line);transition:transform .15s,border-color .15s}
+.cta:hover{transform:translateY(-2px);border-color:#3c4043}
+.cta.primary{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 14px 40px rgba(26,115,232,.4)}
+.cta svg{flex:none;width:30px;height:30px}
+.cta span{display:block;font-size:13px;opacity:.8}
+.cta strong{display:block;font-size:18px;letter-spacing:-.2px}
+.shots{display:flex;gap:16px;margin:56px -20px 0;padding:0 20px 8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.shots::-webkit-scrollbar{display:none}
+.shots img{flex:none;width:220px;border-radius:26px;border:1px solid var(--line);scroll-snap-align:start;background:#131314}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:48px}
+.f{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.f h3{margin:0 0 6px;font-size:17px}
+.f p{margin:0;color:var(--mute);font-size:15px;line-height:1.5}
+.how{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.how div{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.how h3{margin:0 0 10px;font-size:17px}
+.how ol{margin:0;padding-left:20px;color:var(--mute);font-size:15px;line-height:1.7}
+.how b{color:var(--text);font-weight:500}
+footer{margin-top:48px;color:var(--mute);font-size:14px;display:flex;gap:18px;flex-wrap:wrap}
+footer a{color:var(--mute)}
+@media (max-width:640px){.ctas,.how{grid-template-columns:1fr}h1{margin-top:40px}}
+</style>
+</head>
+<body>
+<main>
+  <div class="top"><div class="logo"><img src="app/icons/icon-192.png" alt=""></div><b>FinSync</b><span class="beta">PUBLIC BETA</span></div>
+
+  <h1>Payday was last week.<br><em>Where did it go?</em></h1>
+  <p class="lede">FinSync keeps your expenses, debts and EMIs, investments and savings goals in one place. Everything is synced to your Google account. It's free and has no ads.</p>
+
+  <div class="ctas">
+    <a class="cta" id="android" href="https://github.com/vtameen/finsync/raw/main/download/FinSync-beta.apk">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.637.637 0 0 0-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67a.643.643 0 0 0-.87-.2c-.28.18-.37.54-.22.83L6.4 9.48A10.78 10.78 0 0 0 1 18h22a10.78 10.78 0 0 0-5.4-8.52M7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5m10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5"/></svg>
+      <div><span>Android 7.0 or later · 4 MB</span><strong>Download APK</strong></div></a>
+    <a class="cta" id="iphone" href="app/">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.39-.92-2.41-3.65zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.01.61-2.66 1.37-.58.67-1.1 1.76-.96 2.8 1.01.08 2.05-.52 2.68-1.28z"/></svg>
+      <div><span>iPhone · in Safari</span><strong>Open web app</strong></div></a>
+  </div>
+
+  <div class="shots">
+    <img src="screenshots/home.jpg" alt="Home"><img src="screenshots/inbox.jpg" alt="Bank alerts"><img src="screenshots/flows.jpg" alt="Flows">
+    <img src="screenshots/debts.jpg" alt="Debts"><img src="screenshots/invest.jpg" alt="Invest"><img src="screenshots/goals.jpg" alt="Goals">
+  </div>
+
+  <div class="feat">
+    <div class="f"><h3>Your month at a glance</h3><p>See your net balance, spending rate, where the money went, and the EMIs due this month.</p></div>
+    <div class="f"><h3>Bank SMS to expenses</h3><p>On Android, FinSync turns bank alerts into draft expenses. You review each one and tap to add it.</p></div>
+    <div class="f"><h3>Debts and EMIs</h3><p>Track what you owe, what you're owed, and every loan installment.</p></div>
+    <div class="f"><h3>Investments and goals</h3><p>Follow your portfolio's profit and loss, and see how much to save each month to hit a goal.</p></div>
+  </div>
+
+  <div class="how">
+    <div><h3>Install on Android</h3><ol><li>Tap <b>Download APK</b>.</li><li>Open the file. If Android asks, allow your browser to install apps.</li><li>Choose <b>Continue with Google</b>.</li></ol></div>
+    <div><h3>Add to iPhone</h3><ol><li>Open <b>Open web app</b> in <b>Safari</b>.</li><li>Tap <b>Share</b>, then <b>Add to Home Screen</b>.</li><li>Open FinSync from your home screen and sign in with Google.</li></ol></div>
+  </div>
+
+  <footer><span>FinSync 1.2.0 beta</span><a href="https://github.com/vtameen/finsync">GitHub</a><a href="https://github.com/vtameen/finsync/issues">Report a bug</a><a href="https://vtameen.github.io/finsync-privacy/">Privacy</a></footer>
+</main>
+<script>
+  // Put the visitor's own platform first.
+  var ua = navigator.userAgent, ios = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var a = document.getElementById('android'), i = document.getElementById('iphone');
+  if (ios) { i.classList.add('primary'); i.parentNode.insertBefore(i, a); } else { a.classList.add('primary'); }
+</script>
+</body>
+</html>
